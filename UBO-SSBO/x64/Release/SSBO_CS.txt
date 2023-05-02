@@ -1,0 +1,61 @@
+#version 430
+
+// SSBO buffer
+layout (std430, binding = 1 ) buffer ssbo
+{
+	vec2 ssbo_point[];
+};
+
+// workgroup size
+layout(local_size_x = 128, local_size_y = 1, local_size_z = 1) in;
+
+
+// uniform
+ uniform int numPoint;
+
+void main()
+{
+	// uint i = gl_WorkGroupID.x; // number of Workgroup
+	// uint i = gl_LocalInvocationID.x; // number in this Workgroup
+	uint i = gl_GlobalInvocationID.x; // globalID
+	
+	uint accessID[9];
+	vec2 VecF = vec2(0.0);
+
+	accessID[0] = (i+1) % numPoint;
+	accessID[1] = (i+2) % numPoint;
+	accessID[2] = (i+3) % numPoint;
+	accessID[3] = (i+4) % numPoint;
+	accessID[4] = (i+5) % numPoint;
+	accessID[5] = (i+6) % numPoint;
+	accessID[6] = (i+7) % numPoint;
+	accessID[7] = (i+8) % numPoint;
+	accessID[8] = (i+9) % numPoint;
+
+	for( int k = 0 ; k < 9 ; k++ )
+	{
+		vec2 tempVec;
+		tempVec.x = (ssbo_point[accessID[k]].x - ssbo_point[i].x);
+		tempVec.y = (ssbo_point[accessID[k]].y - ssbo_point[i].y);
+		float distance = sqrt( tempVec.x * tempVec.x + tempVec.y * tempVec.y );
+
+		if( distance < 0.3 && distance > 0.01 )
+		{
+			VecF.x -= tempVec.x*(1.0 / distance);
+			VecF.y -= tempVec.y*(1.0 / distance);
+		}
+		else if( distance >= 0.3 )
+		{
+			VecF.x += tempVec.x * (distance / 2.0);
+			VecF.y += tempVec.y * (distance / 2.0);
+		}
+		else
+		{
+			
+		}
+	}
+
+
+	ssbo_point[i].x += VecF.x * 0.001;
+	ssbo_point[i].y += VecF.y * 0.001;
+}

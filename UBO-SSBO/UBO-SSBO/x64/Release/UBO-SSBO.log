@@ -1,0 +1,26 @@
+﻿  UBO-SSBO.cpp
+c1xx : warning C4199: 2 フェーズの名前参照は、C++/CLI、C++/CX、OpenMP ではサポートされていません。/Zc:twoPhase- を使用します
+c:\users\wtnbks\desktop\development\test\190822-ubo-ssbo\ubo-ssbo\ubo-ssbo\ubo-ssbo.cpp(153): warning C4477: 'printf' : 書式文字列 '%d' には、型 'int' の引数が必要ですが、可変個引数 1 は型 'time_t' です
+  c:\users\wtnbks\desktop\development\test\190822-ubo-ssbo\ubo-ssbo\ubo-ssbo\ubo-ssbo.cpp(153): note: 書式文字列に '%lld' を使用することをお勧めします
+  c:\users\wtnbks\desktop\development\test\190822-ubo-ssbo\ubo-ssbo\ubo-ssbo\ubo-ssbo.cpp(153): note: 書式文字列に '%Id' を使用することをお勧めします
+  c:\users\wtnbks\desktop\development\test\190822-ubo-ssbo\ubo-ssbo\ubo-ssbo\ubo-ssbo.cpp(153): note: 書式文字列に '%I64d' を使用することをお勧めします
+  mainController.cpp
+c1xx : warning C4199: 2 フェーズの名前参照は、C++/CLI、C++/CX、OpenMP ではサポートされていません。/Zc:twoPhase- を使用します
+c:\users\wtnbks\desktop\development\test\190822-ubo-ssbo\ubo-ssbo\ubo-ssbo\maincontroller.cpp(30): warning C4244: '引数': 'time_t' から 'unsigned int' への変換です。データが失われる可能性があります。
+c:\users\wtnbks\desktop\development\test\190822-ubo-ssbo\ubo-ssbo\ubo-ssbo\maincontroller.cpp(53): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+c:\users\wtnbks\desktop\development\test\190822-ubo-ssbo\ubo-ssbo\ubo-ssbo\maincontroller.cpp(54): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+c:\users\wtnbks\desktop\development\test\190822-ubo-ssbo\ubo-ssbo\ubo-ssbo\maincontroller.cpp(55): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+c:\users\wtnbks\desktop\development\test\190822-ubo-ssbo\ubo-ssbo\ubo-ssbo\maincontroller.cpp(56): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+c:\users\wtnbks\desktop\development\test\190822-ubo-ssbo\ubo-ssbo\ubo-ssbo\maincontroller.cpp(367): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+c:\users\wtnbks\desktop\development\test\190822-ubo-ssbo\ubo-ssbo\ubo-ssbo\maincontroller.cpp(373): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+c:\users\wtnbks\desktop\development\test\190822-ubo-ssbo\ubo-ssbo\ubo-ssbo\maincontroller.cpp(379): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+c:\users\wtnbks\desktop\development\test\190822-ubo-ssbo\ubo-ssbo\ubo-ssbo\maincontroller.cpp(376): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+c:\users\wtnbks\desktop\development\test\190822-ubo-ssbo\ubo-ssbo\ubo-ssbo\maincontroller.cpp(382): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\wtnbks\desktop\development\test\190822-ubo-ssbo\ubo-ssbo\ubo-ssbo\maincontroller.cpp(385): warning C4305: '-=': 'double' から 'float' へ切り詰めます。
+c:\users\wtnbks\desktop\development\test\190822-ubo-ssbo\ubo-ssbo\ubo-ssbo\maincontroller.cpp(399): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+  コード生成しています。
+  4 of 255 functions ( 1.6%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    2 functions had inline decision re-evaluated but remain unchanged
+  コード生成が終了しました。
+  UBO-SSBO.vcxproj -> C:\Users\wtnbks\Desktop\development\TEST\190822-UBO-SSBO\UBO-SSBO\x64\Release\UBO-SSBO.exe

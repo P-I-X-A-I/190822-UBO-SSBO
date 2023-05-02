@@ -1,0 +1,43 @@
+#version 430
+
+// in value
+layout ( location = 0 ) in vec3 position;
+layout ( location = 1 ) in vec3 normal;
+
+// out value
+out vec3 normal_out;
+out float coef_out;
+out float spec_out;
+
+// uniform
+uniform mat4 scaleMatrix;
+
+
+// UBO
+layout (std140, binding=5) uniform uniformBlock2{
+	mat4 mvpMatrix;
+	float coef;
+};
+
+
+void main()
+{
+	vec4 tempPos = vec4(position, 1.0);
+	vec4 transPos = scaleMatrix * tempPos;
+	gl_Position = mvpMatrix * transPos;
+	
+	
+	vec3 lightVec = vec3(1.0, 1.0, 1.0);
+	lightVec = normalize( lightVec );
+
+	float specular = dot( lightVec, normal);
+	specular = max( specular, 0.0 );
+
+
+
+	normal_out = normal;
+	coef_out = coef;
+	spec_out = specular;
+}
+
+

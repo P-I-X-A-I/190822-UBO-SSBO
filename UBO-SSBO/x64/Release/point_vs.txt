@@ -1,0 +1,18 @@
+#version 430
+
+
+// SSBO buffer
+layout (std430, binding = 1 ) buffer ssbo
+{
+	vec2 ssbo_point[];
+};
+
+void main()
+{
+	int id = gl_VertexID;
+	gl_Position = vec4( ssbo_point[id].x,
+						ssbo_point[id].y,
+						0.0,
+						1.0);
+	gl_PointSize = 2.0;
+}

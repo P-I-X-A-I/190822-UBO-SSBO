@@ -1,0 +1,12 @@
+#version 430
+
+
+layout ( location = 0 ) out vec4 fragColor;
+
+in float colorCoef;
+in vec4 color_v;
+
+void main()
+{
+	fragColor = vec4(color_v.r, color_v.g, 1.0-colorCoef,  color_v.a);
+}
